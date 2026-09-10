@@ -1,0 +1,22 @@
+@font-face {
+    font-family: relogio;
+    src: url(../font/DS-DIGI.TTF)
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../img/background.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
