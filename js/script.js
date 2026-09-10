@@ -14,4 +14,5 @@ function relogio() {
     s = hoje.getSeconds()
     d = hoje.getDays()
     mt = hoje.getMounths()
+    y = hoje.getYears()
 }
