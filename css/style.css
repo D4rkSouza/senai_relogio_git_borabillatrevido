@@ -1,103 +1,333 @@
-@font-face {
-    font-family: relogio;
-    src: url(../font/DS-DIGI.TTF)
-}
+/* =========================
+   RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* =========================
+   BODY
+========================= */
+
 body {
-    background-image: url(../img/background.jpg);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #010914,
+            #031a32,
+            #010914
+        );
+
+    font-family: Arial, Helvetica, sans-serif;
+
     color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 40px;
 }
+
+
+/* =========================
+   PAINEL PRINCIPAL
+========================= */
+
+body > div {
+    width: 370px;
+
+    padding: 14px;
+
+    background: #020b16;
+
+    border: 1px solid #008fd0;
+
+    border-radius: 7px;
+
+    box-shadow:
+        0 0 8px rgba(0, 191, 255, 0.45),
+        inset 0 0 15px rgba(0, 100, 160, 0.15);
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
 
 h1 {
-    font-size: 30px;
-    margin-bottom: 30px;
-    font-family: relogio;
+    width: 100%;
+
+    padding: 5px 10px;
+
+    margin-bottom: 8px;
+
+    font-size: 16px;
+
+    text-align: center;
+
+    letter-spacing: 1px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            #03182d,
+            #063c68,
+            #03182d
+        );
+
+    border: 1px solid #006da8;
+
+    border-radius: 5px;
+
+    text-shadow:
+        0 0 6px #00bfff;
 }
 
+
+/* =========================
+   HORA
+========================= */
 
 .central_hora {
     display: flex;
+
     justify-content: center;
+
     align-items: center;
-    gap: 10px;
-    background: rgb(43, 38, 38);
+
+    gap: 5px;
+
+    margin: 4px 0 8px;
 }
+
 
 .central {
-    background-color: #333;
-    border: 1px solid #555;
-    padding: 15px 20px;
-    border-radius: 5px;
+    width: 95px;
+
+    padding: 3px 5px;
+
+    background: #020914;
+
+    border: 1px solid #006f9f;
+
+    border-radius: 4px;
+
+    text-align: center;
 }
+
 
 .central span {
-    font-size: 50px;
+    font-family: "Courier New", monospace;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    color: #00cfff;
+
+    text-shadow:
+        0 0 5px #00bfff,
+        0 0 12px rgba(0, 191, 255, 0.5);
 }
+
+
+/* =========================
+   DOIS PONTOS
+========================= */
 
 .dpontos {
-    font-size: 45px;
+    font-family: "Courier New", monospace;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #00d9ff;
+
+    text-shadow:
+        0 0 7px #00cfff;
 }
 
 
+/* =========================
+   LINHAS
+========================= */
 
 hr {
-    width: 60%;
-    margin: 30px auto;
-    border: 0;
-    border-top: 1px solid #555;
-}
+    width: 95%;
 
+    margin: 8px auto;
+
+    border: none;
+
+    border-top: 1px solid #006d9e;
+
+    box-shadow:
+        0 0 4px rgba(0, 191, 255, 0.3);
+}
 
 .data_meio {
     display: flex;
+
     justify-content: center;
+
     align-items: center;
-    gap: 10px;
-    font-size: 25px;
+
+    gap: 6px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: bold;
 }
 
-.data {
-    background-color: #333;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: 1px solid #555;
+.data_meio > span {
+    color: #00bfff;
+
+    font-size: 16px;
 }
 
+.data_meio .data,
+.data_meio > .data_meio {
+    padding: 2px 5px;
+
+    color: #00cfff;
+}
 
 .central_data {
     display: flex;
+
     justify-content: center;
-    gap: 20px;
+
+    gap: 7px;
+
+    margin-top: 5px;
 }
 
 .central_data .data {
-    min-width: 90px;
+    width: 85px;
+
+    padding: 5px 3px;
+
+    text-align: center;
+
+    background: #031325;
+
+    border: 1px solid #007eb8;
+
+    border-radius: 4px;
+
+    box-shadow:
+        inset 0 0 8px rgba(0, 150, 220, 0.08);
+}
+.central_data .data p {
+    margin-bottom: 2px;
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    color: #ffffff;
+
+    text-transform: uppercase;
 }
 
-.central_data p {
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #aaa;
+
+.central_data .data span {
+    font-family: "Courier New", monospace;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    color: #00cfff;
+
+    text-shadow:
+        0 0 5px #00bfff;
 }
 
-.central_data span {
-    font-size: 25px;
-}
 
 .bom_sla {
-    margin-top: 30px;
-    font-size: 20px;
+    margin-top: 7px;
+
+    padding: 5px;
+
+    text-align: center;
+
+    background: #070e14;
+
+    border: 1px solid #ffd000;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 0 5px rgba(255, 208, 0, 0.2);
 }
 
+
+#boas_vindas {
+    display: inline-block;
+
+    color: #ffd000;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 6px rgba(255, 208, 0, 0.7);
+}
+
+
+
+
 .bom_sla p {
-    display: inline;
-    margin-left: 5px;
+    display: none;
+}
+
+
+
+body > div:hover {
+    border-color: #00cfff;
+
+    box-shadow:
+        0 0 12px rgba(0, 207, 255, 0.55),
+        inset 0 0 15px rgba(0, 100, 160, 0.2);
+
+    transition: 0.2s;
+}
+
+
+@media (max-width: 450px) {
+
+    body {
+        padding: 10px;
+    }
+
+    body > div {
+        width: 100%;
+        max-width: 370px;
+    }
+
+    .central {
+        width: 85px;
+    }
+
+    .central span {
+        font-size: 32px;
+    }
+
+    .central_data .data {
+        width: 75px;
+    }
 }
