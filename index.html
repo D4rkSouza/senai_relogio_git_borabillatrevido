@@ -1,39 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Relógio</title>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body>
-<h1>PAINEL DIGITAL</h1>
 
-<div class="central_hora">
+<body>
+
+    <h1>PAINEL DIGITAL</h1>
+
+    <!-- RELÓGIO -->
+    <div class="central_hora">
+
         <div class="central">
             <span id="hora">00</span>
         </div>
+
+        <span class="dpontos">:</span>
+
+        <div class="central">
+            <div class="minuto">
+                <span id="minuto">00</span>
+            </div>
+        </div>
+
+        <span class="dpontos">:</span>
+
+        <div class="central">
+            <div class="segundo">
+                <span id="segundo">00</span>
+            </div>
+        </div>
+
     </div>
 
-        <span class="dpontos">:</span>
+    <hr>
 
-    <div class="central">
-        <div class="minuto">
-            <span id="minuto">00</span>
-        </div>
+    <!-- DATA -->
+    <div class="data_meio">
 
-        <span class="dpontos">:</span>
-      
-    <div class="central">    
-        <div class="segundo">
-            <span id="segundo">00</span>
-        </div>
-</div>
-
-<hr>
-
-<div class="data_meio">
         <div class="data">
             <span id="dia">00</span>
         </div>
@@ -47,34 +58,41 @@
         <span>/</span>
 
         <div class="data">
-            <span id="ano">00</span>
+            <span id="ano">0000</span>
         </div>
-    </div>
-    
 
-<hr>
+    </div>
+
+    <hr>
+
+    <!-- DATA DETALHADA -->
     <div class="central_data">
+
         <div class="data">
             <p>Dia</p>
-            <span id="dia">00</span>
+            <span id="dia_detalhado">00</span>
         </div>
 
         <div class="data">
-            <p>Mes</p>
-            <span id="mes">00</span>
+            <p>Mês</p>
+            <span id="mes_detalhado">00</span>
         </div>
 
         <div class="data">
             <p>Ano</p>
-            <span id="ano">00</span>
+            <span id="ano_detalhado">0000</span>
         </div>
+
     </div>
-</div>
 
-<div class="bom_sla">
-    <span id="boas_vindas"></span><p>Bom</p>
-</div>
+    <!-- MENSAGEM -->
+    <div class="bom_sla">
+        <span id="boas_vindas"></span>
+        <p>Bom</p>
+    </div>
 
-<script src="javascript/script.js"></script>
+    <script src="javascript/script.js"></script>
+
 </body>
+
 </html>
