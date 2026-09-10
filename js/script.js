@@ -1,48 +1,81 @@
-
 const horas = document.querySelector('#hora')
 const minutos = document.querySelector('#minuto')
 const segundos = document.querySelector('#segundo')
-const dias = document.querySelector('#dia')
-const mes = document.querySelector('#mes')
-const ano = document.querySelector('#ano')
+
+const diaMeio = document.querySelector('#dia_meio')
+const mesMeio = document.querySelector('#mes_meio')
+const anoMeio = document.querySelector('#ano_meio')
+
+const diaDetalhado = document.querySelector('#dia_detalhado')
+const mesDetalhado = document.querySelector('#mes_detalhado')
+const anoDetalhado = document.querySelector('#ano_detalhado')
 const bom = document.querySelector('#boas_vindas')
 
 setInterval(relogio, 1000)
 
 function relogio() {
-    hoje = new Date()
-    h = hoje.getHours()
-    m = hoje.getMinutes()
-    s = hoje.getSeconds()
-    d = hoje.getDays()
-    mt = hoje.getMounths()
-    y = hoje.getYears()
 
-    if (h < 10) {
-        h = '0'+h
-    }
-    if (m < 10) {
-        m = '0'+m
-    }
-    if (s < 10) {
-        s = '0'+s
-    }
+const hoje = new Date()
 
-    if (h < 12) {
-        bom = console.log('Bom dia')
-    }
-    else if (h >= 12) {
-        bom = console.log('Boa tarde')
-    }
+let h = hoje.getHours()
+let m = hoje.getMinutes()
+let s = hoje.getSeconds()
 
-    else if (h >= 18) {
-        bom = console.log('Boa noite')
-    }
+let d = hoje.getDate()
+let mt = hoje.getMonth() + 1
+let y = hoje.getFullYear()
 
-    horas.textContent = h
-    minutos.textContent = m
-    segundos.textContent = s
-    dias.textContent = d
-    mes.textContent = mt
-    ano.textContent = y
+
+if (h < 10) {
+    h = '0' + h
 }
+
+if (m < 10) {
+    m = '0' + m
+}
+
+if (s < 10) {
+    s = '0' + s
+}
+
+if (d < 10) {
+    d = '0' + d
+}
+
+if (mt < 10) {
+    mt = '0' + mt
+}
+
+
+// Saudação
+if (h < 12) {
+    bom.textContent = 'Bom Dia'
+}
+else if (h < 18) {
+    bom.textContent = 'Boa Tarde'
+}
+else {
+    bom.textContent = 'Boa Noite'
+}
+
+
+// Relógio
+horas.textContent = h
+minutos.textContent = m
+segundos.textContent = s
+
+
+// Data do meio
+diaMeio.textContent = d
+mesMeio.textContent = mt
+anoMeio.textContent = y
+
+
+// Data detalhada
+diaDetalhado.textContent = d
+mesDetalhado.textContent = mt
+anoDetalhado.textContent = y
+
+}
+
+relogio()

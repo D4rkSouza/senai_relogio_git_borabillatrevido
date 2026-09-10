@@ -1,7 +1,8 @@
 @font-face {
     font-family: relogio;
-    src: url(../font/DS-DIGI.TTF)
+    src: url('/font/DS-DIGI.TTF');
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -9,95 +10,170 @@
 }
 
 body {
-    background-image: url(../img/background.jpg);
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 40px;
-}
+    background-image: url('/img/background.jpg');
+    width: 100%;
+    min-height: 100vh;
 
-h1 {
-    font-size: 30px;
-    margin-bottom: 30px;
-    font-family: relogio;
-}
-
-
-.central_hora {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    background: rgb(43, 38, 38);
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.central {
-    background-color: #333;
-    border: 1px solid #555;
-    padding: 15px 20px;
-    border-radius: 5px;
+.centro_de_tudo {
+    backdrop-filter: blur(0.5px);
+    box-shadow: 0px 0px 10px 3px black;
+    width: 480px;
+    min-height: 430px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: relogio;
+    text-align: center;
+    padding: 20px;
+    background: #181616;
 }
 
-.central span {
-    font-size: 50px;
+h1 {
+    margin-bottom: 20px;
+    font-family: relogio;
+    font-size: 22px;
+    color: white;
 }
+
+.centro_de_tudo > div:first-of-type {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 0;
+}
+
+#hora,
+#minuto,
+#segundo {
+    width: 75px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #303030;
+
+    border: 1px solid #505050;
+    border-radius: 4px;
+
+    color: white;
+
+    font-size: 38px;
+    font-weight: normal;
+}
+
+
 
 .dpontos {
-    font-size: 45px;
+    font-size: 32px;
+    color: white;
+
+    margin: 0 2px;
 }
 
 
+/* LINHAS */
 
 hr {
-    width: 60%;
-    margin: 30px auto;
-    border: 0;
+    width: 80%;
+
+    margin: 25px auto;
+
+    border: none;
     border-top: 1px solid #555;
 }
 
+
+/* DATA */
 
 .data_meio {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    font-size: 25px;
+
+    gap: 6px;
+
+    font-size: 20px;
 }
 
-.data {
-    background-color: #333;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: 1px solid #555;
+.data_meio div {
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 10px;
+
+    background: #303030;
+
+    border: 1px solid #505050;
+    border-radius: 4px;
 }
 
+
+/* DATA DETALHADA */
 
 .central_data {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+
+    gap: 15px;
 }
 
-.central_data .data {
-    min-width: 90px;
+.central_data > div {
+    width: 70px;
+    height: 65px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #303030;
+
+    border: 1px solid #505050;
+    border-radius: 4px;
 }
 
 .central_data p {
-    font-size: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
+
     color: #aaa;
+
+    font-size: 11px;
 }
 
-.central_data span {
-    font-size: 25px;
+#dia_detalhado,
+#mes_detalhado,
+#ano_detalhado {
+    font-size: 21px;
+    color: white;
 }
+
+
+/* BOAS-VINDAS */
 
 .bom_sla {
-    margin-top: 30px;
-    font-size: 20px;
-}
+    margin-top: 25px;
 
-.bom_sla p {
-    display: inline;
-    margin-left: 5px;
+    font-size: 18px;
+    color: white;
 }
