@@ -1,0 +1,6 @@
+const horas = document.querySelector('#hora')
+const minutos = document.querySelector('#minuto')
+const segundos = document.querySelector('#segundo')
+const horas = document.querySelector('#hora')
+const horas = document.querySelector('#hora')
+const horas = document.querySelector('#hora')
