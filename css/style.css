@@ -2,21 +2,102 @@
     font-family: relogio;
     src: url(../font/DS-DIGI.TTF)
 }
-
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-image: url(../img/background.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
 
+body {
+    background-image: url(../img/background.jpg);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 40px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-family: relogio;
+}
+
+
+.central_hora {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+    background: rgb(43, 38, 38);
 }
 
+.central {
+    background-color: #333;
+    border: 1px solid #555;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.central span {
+    font-size: 50px;
+}
+
+.dpontos {
+    font-size: 45px;
+}
+
+
+
+hr {
+    width: 60%;
+    margin: 30px auto;
+    border: 0;
+    border-top: 1px solid #555;
+}
+
+
+.data_meio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+}
+
+.data {
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #555;
+}
+
+
+.central_data {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.central_data .data {
+    min-width: 90px;
+}
+
+.central_data p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #aaa;
+}
+
+.central_data span {
+    font-size: 25px;
+}
+
+.bom_sla {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.bom_sla p {
+    display: inline;
+    margin-left: 5px;
+}
